@@ -17,12 +17,12 @@
     </a>
   </li>
 </def>
-  
+
 
 <html>
   <head>
     <link type="text/css" href="stylesheets/themes/smoothness/ui.all.css" rel="stylesheet" />
-    <script type="text/javascript" src="javascripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery-ui-1.8.11.custom.min.js"></script>
     <script type="text/javascript">
       jQuery(document).ready(function(){
@@ -49,23 +49,23 @@
           </ul>
           <repeat:tag_defs>
             <div id="#{this.name}-tag">
-          
+
               <h2><%= this.name %></h2>
-              
+
               <%= this.comment_intro_html %>
-          
+
               <unless test="&this.parameters.empty?">
                 <h3>Parameters</h3>
                 <param-list with="&this.parameters"/>
               </unless>
-          
+
               <%= this.comment_rest_html %>
 
               <div class="source">
                 <h3><a href="#">Source</a></h3>
                 <pre><code><%= h this.source %></code></pre>
               </div>
-          
+
             </div>
           </repeat>
         </div>

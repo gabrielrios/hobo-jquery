@@ -20,12 +20,12 @@
     </a>
   </li>
 </def>
-  
+
 
 <html>
   <head>
     <link type="text/css" href="stylesheets/themes/smoothness/ui.all.css" rel="stylesheet" />
-    <script type="text/javascript" src="javascripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery-ui-1.8.11.custom.min.js"></script>
     <script type="text/javascript">
       jQuery(document).ready(function(){
@@ -53,23 +53,23 @@
           </ul>
           <% taglib.tag_defs.each {|tag| %>
             <div id="#{tag.name}-tag">
-          
+
               <h2><%= tag.name %></h2>
-              
+
               <%= tag.comment_intro_html %>
-          
+
               <% if !tag.parameters.empty? %>
                 <h3>Parameters</h3>
                 <param-list with="&tag.parameters"/>
               <% end %>
-          
+
               <%= tag.comment_rest_html %>
 
               <div class="source">
                 <h3><a href="#">Source</a></h3>
                 <pre><code><%= h tag.source %></code></pre>
               </div>
-          
+
             </div>
           <% } %>
         </div>
